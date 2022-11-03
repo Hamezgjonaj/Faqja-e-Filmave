@@ -6,8 +6,13 @@ const routes: Routes = [
   //   path: 'feed',
   //   loadChildren: () => import('./movies/movies.module').then(m => m.MoviesModule)
   // },
+  // {
+  //   path: '',
+  //   loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  // },
   {
-    path: './Home'
+    path: '**',
+    redirectTo: ''
   }
 ];
 

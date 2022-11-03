@@ -3,23 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './Home/Home.component';
-import { LogInComponent } from './Home/log-in/log-in.component';
-import { RegisterComponent } from './Home/register/register.component';
-import { BannerComponent } from './movies/banner/banner.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LogInComponent,
-    BannerComponent,
-    RegisterComponent,
-    HomeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+    // MoviesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
