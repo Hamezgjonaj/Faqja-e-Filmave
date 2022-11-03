@@ -9,4 +9,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Faqja-e-Filmave';
 }
-console.log("Hello world!");
+console.log("Hello appcomponnt world!");
