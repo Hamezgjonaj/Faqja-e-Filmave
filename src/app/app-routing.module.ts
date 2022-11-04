@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'feed',
-    loadChildren: () => import('./movies/movies.module').then(m => m.MoviesModule)
-  },
+  // {
+  //   path: 'feed',
+  //   loadChildren: () => import('./movies/movies.module').then(m => m.MoviesModule)
+  // },
   {
     path: '',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
