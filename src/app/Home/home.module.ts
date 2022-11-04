@@ -5,11 +5,12 @@ import { LoginComponent } from './log-in/log-in.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeRoutingModule } from './Home-routing.module';
 import { RowComponent } from './row/row.component';
+import { AccordionComponentComponent } from './accordion-component/accordion-component.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, RowComponent, LoginComponent, RegisterComponent],
+  declarations: [HomeComponent, RowComponent, LoginComponent, RegisterComponent, AccordionComponentComponent],
   imports: [
     CommonModule,
     HomeRoutingModule

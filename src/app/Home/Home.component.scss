@@ -37,6 +37,7 @@
   background-color: #db0510;
   color: white;
   cursor: pointer;
+  border-color: #db0510;
 }
 .row__one-text {
   position: absolute;
@@ -71,11 +72,51 @@
   height: 100%;
   position: absolute;
   z-index: 0;
-  background-image: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.733),
-    rgba(0, 0, 0, 0.527)
-  );
+  background-image: url("/assets/foto-e-begraundit-faqja-e-par.jpg");
+  // background-image: linear-gradient(
+  //   180deg,
+  //   rgba(0, 0, 0, 0.733),
+  //   rgba(0, 0, 0, 0.527)
+  // );
+}
+body {
+  background: #F9F9F9;
+}
+
+.myaccordion {
+  max-width: 500px;
+  margin: 50px auto;
+  box-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+.myaccordion .card,
+.myaccordion .card:last-child .card-header {
+  border: none;
+}
+
+.myaccordion .card-header {
+  border-bottom-color: #EDEFF0;
+  background: transparent;
+}
+
+.myaccordion .fa-stack {
+  font-size: 18px;
+}
+
+.myaccordion .btn {
+  width: 100%;
+  font-weight: bold;
+  color: #004987;
+  padding: 0;
+}
+
+.myaccordion .btn-link:hover,
+.myaccordion .btn-link:focus {
+  text-decoration: none;
+}
+
+.myaccordion li + li {
+  margin-top: 10px;
 }
 
 .row {
