@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeRoutingModule } from './Home-routing.module';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-Home',
@@ -8,9 +9,10 @@ import { HomeRoutingModule } from './Home-routing.module';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { console.log("Hello"); }
+  constructor(public router: Router) { console.log("Hello"); }
 
   ngOnInit(): void {
+    
   }
 
 

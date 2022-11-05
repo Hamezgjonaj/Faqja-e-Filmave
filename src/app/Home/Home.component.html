@@ -2,7 +2,7 @@
   <div class="row__one">
     <img class="row__logo" src="https://www.freepnglogos.com/uploads/red-netflix-logo-text-png-3.png"
       alt="Netflix Logo" />
-    <button routerLink="login" class="row__connexion">Sing In</button>
+    <button (click)="this.router.navigate(['Login']);" class="row__connexion">Sing In</button>
     <div class="row__one-text">
       <h1>Unlimited movies, TV shows and more.</h1>
       <h2>Watch anywhere. Cancel anytime.</h2>
@@ -54,7 +54,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row row--reverse">
     <div class="col">
       <h1>Create profiles for kids.</h1>
       <h3>
@@ -62,7 +62,7 @@
       </h3>
     </div>
     <div class="col">
-      <img src="/assets/boxshot.png" />
+      <img src="/assets/Kids.png" />
     </div>
   </div>
 
