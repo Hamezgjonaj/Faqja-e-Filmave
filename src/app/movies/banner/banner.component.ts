@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from 'src/app/Services/movies.service';
+import {reques}
+
+
 
 @Component({
   selector: 'app-banner',
