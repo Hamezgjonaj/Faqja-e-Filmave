@@ -12,7 +12,7 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(
-      "%Isworks", "background:black ; color: white ;font-size:30px", "color: red; font-size:40px;padding:20px"
+      "This is working movies component"
     )
   }
 
