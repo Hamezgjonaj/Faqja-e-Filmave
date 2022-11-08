@@ -5,26 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MovieTypeComponent } from './movies/movie-type/movie-type.component';
-import { NavBarComponent } from './movies/nav-bar/nav-bar.component';
-import { MoviesComponent } from './movies/movies.component';
-
+import { MoviesModule } from './movies/movies.module';
+import { CommonModule } from '@angular/common';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MovieTypeComponent,
-    NavBarComponent,
-    MoviesComponent
+    AppComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule
-    // MoviesModule
+    FontAwesomeModule,
+    MoviesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

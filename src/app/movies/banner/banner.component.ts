@@ -1,4 +1,4 @@
-import { MoviesService } from '../../services/movies.service';
+import { MoviesService } from '../../Services/movies.service';
 import { Component, OnInit } from '@angular/core';
 import { requests } from '../../requests';
 import { Subscription } from 'rxjs';
@@ -13,13 +13,13 @@ let apiLoaded = false;
 })
 export class BannerComponent implements OnInit {
 
-  interval;
+  interval: any;
 
-  movie;
-  imageUrl: string;
+  movie: any;
+  imageUrl: string|any;
   subscriptions: Subscription[] = []
 
-  trailerUrl: string;
+  trailerUrl: string|any;
 
 
   constructor(private moviesService: MoviesService) { }
@@ -29,7 +29,7 @@ export class BannerComponent implements OnInit {
 
     this.subscriptions.push(this.moviesService.getMovies(randomRequestFetchUrl.url).subscribe(
 
-      data => {
+      (      data: { results: string | any[string]; }) => {
         this.interval = setInterval(
           () => {
             this.movie = data.results[Math.floor(Math.random() * Math.floor(data.results.length))];
@@ -37,7 +37,7 @@ export class BannerComponent implements OnInit {
           }, 5000)
       }
       ,
-      error => {
+      (      error: any) => {
         console.log(`%c${error}, '%cIt seems that there is an error`, "background:black ; color: white", "color: red; font-size:25px");
 
       }
@@ -54,7 +54,7 @@ export class BannerComponent implements OnInit {
     }
   }
 
-  randomfetchUrl(obj) {
+  randomfetchUrl(obj: { [x: string]: any; fetchNetflixOriginals?: { url: string; title: string; isLargeRow: boolean; }; fetchTrending?: { url: string; title: string; }; fetchTopRated?: { url: string; title: string; }; fetchActionMovies?: { url: string; title: string; }; fetchDocumentoriesMovies?: { url: string; title: string; }; fetchScienceFiction?: { url: string; title: string; }; }) {
     const keys = Object.keys(obj);
     return obj[keys[keys.length * Math.random() << 0]];
   };
@@ -62,12 +62,12 @@ export class BannerComponent implements OnInit {
 
 
 
-  truncateDescription(description) {
+  truncateDescription(description: string) {
     return description?.substring(0, 150) + '...' || ''
   }
 
 
-  onMovieClicked(movie) {
+  onMovieClicked(movie: { title: any; name: any; }) {
     if (this.trailerUrl) {
       this.setTrailerUrl("");
     }
@@ -76,17 +76,17 @@ export class BannerComponent implements OnInit {
     }
   }
 
-  setTrailerUrl(url) {
+  setTrailerUrl(url: string) {
     this.trailerUrl = url;
   }
 
-  playYoutubeTrailer(search) {
+  playYoutubeTrailer(search: any) {
     movieTrailer(search).then(
-      result => {
+      (      result: string) => {
         this.setTrailerUrl(result.split('?v=')[1])
       }
     ).catch(
-      error => console.log(`%c${error}, '%cMovie not Found or error Occured`, "background:black ; color: white ;font-size:25px", "color: red; font-size:25px")
+      (      error: any) => console.log(`%c${error}, '%cMovie not Found or error Occured`, "background:black ; color: white ;font-size:25px", "color: red; font-size:25px")
     )
   }
 

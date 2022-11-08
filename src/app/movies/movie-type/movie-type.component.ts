@@ -1,6 +1,6 @@
 import { MoviesService} from '../../Services/movies.service'
 import { Component, Input, OnDestroy } from '@angular/core';
- import * as movieTrailer from 'movie-trailer';
+import * as movieTrailer from 'movie-trailer';
 import { Subscription } from 'rxjs';
 
 
