@@ -1,27 +1,27 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA }      from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { MoviesComponent } from './movies.component';
-import { NavbarComponent } from './nav-bar/nav-bar.component';
-import { MovieTypeComponent } from './movie-type/movie-type.component';
-import { BannerComponent } from './banner/banner.component';
-import { YouTubePlayerModule } from '@angular/youtube-player';
+import { NavbarComponent } from './navbar/navbar.component';
 import { MoviesRoutingModule } from './movies-routing.module';
+import { BannerComponent } from './banner/banner.component';
+import { MoviesComponent } from './movies.component';
+import { MovieTypeComponent } from './movie-type/movie-type.component';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+
+
 
 @NgModule({
   declarations: [
-    MoviesComponent,
-    NavbarComponent,
     MovieTypeComponent,
-    BannerComponent
+    MoviesComponent,
+    BannerComponent,
+    NavbarComponent
   ],
-
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-
   imports: [
     CommonModule,
-    YouTubePlayerModule,
-    MoviesRoutingModule
-  ]
+    MoviesRoutingModule,
+    YouTubePlayerModule
+  ],
+  exports: []
+
 })
 export class MoviesModule { }

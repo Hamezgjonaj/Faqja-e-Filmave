@@ -1,8 +1,7 @@
-import { MoviesService} from '../../Services/movies.service'
+import { MoviesService } from '../../services/movies.service';
 import { Component, Input, OnDestroy } from '@angular/core';
 import * as movieTrailer from 'movie-trailer';
 import { Subscription } from 'rxjs';
-
 
 let apiLoaded = false;
 
@@ -13,9 +12,12 @@ let apiLoaded = false;
 })
 
 export class MovieTypeComponent implements OnDestroy {
-  @Input() title!: string;
-  @Input() fetchUrl!: string;
-  @Input() isLargeRow!: boolean;
+  @Input()
+  title!: string;
+  @Input()
+  fetchUrl!: string;
+  @Input()
+  isLargeRow: boolean = false;
 
 
   baseUrl = 'https://image.tmdb.org/t/p/original/';

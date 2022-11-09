@@ -1,7 +1,6 @@
-import { MoviesComponent } from "./movies.component";
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule, } from "@angular/router";
-
+import { MoviesComponent } from './movies.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -9,9 +8,10 @@ const routes: Routes = [
     component: MoviesComponent
   },
   {
-    path: '**',
-    redirectTo: ''
-  }];
+    path: '**', redirectTo: ''
+  }
+];
+
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]

@@ -21,10 +21,12 @@
     "@angular/youtube-player": "^14.2.6",
     "@fortawesome/angular-fontawesome": "^0.11.1",
     "@types/bootstrap": "^5.2.5",
+    "@types/selenium-webdriver": "^4.1.9",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^5.2.2",
     "movie-trailer": "^2.0.6",
     "rxjs": "~7.5.0",
+    "selenium-webdriver": "^4.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

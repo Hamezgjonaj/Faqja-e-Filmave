@@ -29,7 +29,7 @@
             ],
 
       "styles": [
-     
+
 
       ],
       "scripts": [
@@ -61,7 +61,7 @@
             "development": {
               "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
+              "vendorChunk": false,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true

@@ -1,4 +1,4 @@
-import { MoviesService } from '../../Services/movies.service';
+import { MoviesService } from '../../services/movies.service';
 import { Component, OnInit } from '@angular/core';
 import { requests } from '../../requests';
 import { Subscription } from 'rxjs';
