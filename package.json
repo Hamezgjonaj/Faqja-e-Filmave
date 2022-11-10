@@ -20,6 +20,8 @@
     "@angular/router": "^14.2.0",
     "@angular/youtube-player": "^14.2.6",
     "@fortawesome/angular-fontawesome": "^0.11.1",
+    "@fortawesome/fontawesome-svg-core": "~1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@types/bootstrap": "^5.2.5",
     "@types/selenium-webdriver": "^4.1.9",
     "angular-font-awesome": "^3.1.2",
