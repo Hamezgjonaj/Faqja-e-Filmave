@@ -12,12 +12,12 @@ let apiLoaded = false;
 })
 
 export class MovieTypeComponent implements OnDestroy {
-  @Input()
-  title!: string;
-  @Input()
-  fetchUrl!: string;
-  @Input()
-  isLargeRow: boolean = false;
+  @Input() title!: string;
+
+  @Input() fetchUrl!: string;
+
+  @Input() isLargeRow: boolean = false;
+
 
 
   baseUrl = 'https://image.tmdb.org/t/p/original/';
@@ -57,7 +57,7 @@ export class MovieTypeComponent implements OnDestroy {
   }
 
 
-  onMovieClicked(movie: { title: any; name: any; }) {
+  onMovieClicked(movie: any) {
     if (this.trailerUrl) {
       this.setTrailerUrl("");
     }
@@ -65,6 +65,7 @@ export class MovieTypeComponent implements OnDestroy {
       this.playYoutubeTrailer(movie?.title || movie?.name || '');
     }
   }
+
 
   setTrailerUrl(url: string) {
     this.trailerUrl = url;
