@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
 body {
   margin: 0;
   font-family: 'MyWebFont';
+ max-width: 0%;
+ max-height: 0%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 @font-face {

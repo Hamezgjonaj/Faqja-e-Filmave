@@ -154,11 +154,7 @@ h3 {
   font-weight: normal;
 }
 
-// .fade {
-//   color: rgb(56, 253, 56);
-//   font-size: 2em;
-//   animation: fade 30s infinite;
-// }
+
 
 @keyframes fade {
   0% {
@@ -182,5 +178,93 @@ h3 {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+// /* footer */
+
+footer {
+  color: #757575;
+  margin: 3rem auto;
+  width: 70%;
+}
+
+footer .links > * {
+  margin-bottom: 20px;
+}
+
+footer p {
+  margin-bottom: 2rem;
+}
+
+footer .links ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+footer .language {
+  padding: 1rem 0;
+  font-weight: 700;
+  cursor: pointer;
+  width: 14%;
+  border: 1px solid #333;
+  border-radius: 0.2rem;
+  font-family: inherit;
+  padding: 1rem;
+  position: relative;
+}
+
+footer .language:active {
+  outline: 1px solid #fff;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+footer .dropdown-list {
+  width: 100%;
+}
+
+footer .dropdown-list ul {
+  display: none;
+  position: absolute;
+  background: #000;
+  border: 1px solid #333;
+  top: 58px;
+  width: 100%;
+  left: 0;
+}
+
+footer .dropdown-list li {
+  margin: 0.5rem 0;
+}
+
+
+footer .dropdown-list ul.show {
+  display: block;
+}
+
+
+
+@media (max-width: 950px) {
+
+  footer {
+    width: 90%;
+  }
+
+  footer .language {
+    width: 20%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  footer .links ul {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
   }
 }
