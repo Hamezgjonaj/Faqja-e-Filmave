@@ -5,7 +5,7 @@
 
 .row__posters {
   display: flex;
- 
+
   transition: all 1s linear;
 }
 
@@ -36,4 +36,12 @@
 
 .row__posterLarge:hover {
   transform: scale(1.09);
+}
+iframe {
+  width: 100% !important;
+}
+youtube-player {
+  iframe {
+    width: 100% !important;
+  }
 }

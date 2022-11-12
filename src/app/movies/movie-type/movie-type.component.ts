@@ -17,6 +17,7 @@ export class MovieTypeComponent implements OnDestroy {
   @Input() fetchUrl!: string;
 
   @Input() isLargeRow: boolean = false;
+ width="100%"
 
 
 

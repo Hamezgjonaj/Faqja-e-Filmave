@@ -5,7 +5,6 @@ import { MovieTypeComponent } from './movie-type.component';
 describe('MovieTypeComponent', () => {
   let component: MovieTypeComponent;
   let fixture: ComponentFixture<MovieTypeComponent>;
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ MovieTypeComponent ]
