@@ -1,20 +1,9 @@
 <div class="row" *ngIf="movies">
   <h2>{{ title }}</h2>
   <div class="row__posters" #posters>
-    <img
-      *ngFor="let movie of movies"
-      [ngClass]="isLargeRow ? 'row__posterLarge' : 'row__poster'"
-      [src]="
+    <img *ngFor="let movie of movies" [ngClass]="isLargeRow ? 'row__posterLarge' : 'row__poster'" [src]="
         isLargeRow ? baseUrl + movie.poster_path : baseUrl + movie.backdrop_path
-      "
-      [alt]="movie.title"
-      (click)="onMovieClicked(movie)"
-    />
+      " [alt]="movie.title" (click)="onMovieClicked(movie)" />
   </div>
-  <!-- <youtube-player *ngIf="trailerUrl"
-  class="row__trailer"
-  [videoId]="trailerUrl"
-  [width="100%"]
-></youtube-player> -->
+  <youtube-player *ngIf="trailerUrl" class="row__trailer" [videoId]="trailerUrl" style="width: 100%;"></youtube-player>
 </div>
-
