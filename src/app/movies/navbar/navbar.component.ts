@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   navShow: boolean = false
-  constructor() { }
+  constructor(private router: Router  ) { }
 
   ngOnInit(): void {
     window.onscroll = () => {
@@ -21,5 +22,7 @@ export class NavbarComponent implements OnInit {
       }
     }
   }
-
+goToUser(){
+this.router.navigate(['/profile']);
+}
 }

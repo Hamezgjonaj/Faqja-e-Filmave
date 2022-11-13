@@ -9,12 +9,14 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 
 
 
+
 @NgModule({
   declarations: [
     MovieTypeComponent,
     MoviesComponent,
     BannerComponent,
-    NavbarComponent
+    NavbarComponent,
+
   ],
   imports: [
     CommonModule,

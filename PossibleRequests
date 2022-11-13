@@ -1,6 +1,7 @@
 
-https://api.themoviedb.org/3/movie/550?api_key=28080d33c64f2524c45196d7e9b80b83&language=en-US
-  {
+
+@import url("https://api.themoviedb.org/3/movie/550?api_key=28080d33c64f2524c45196d7e9b80b83&language=en-US");
+{
     "genres": [{
       "id": 28,
       "name": "Action"

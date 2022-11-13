@@ -8,8 +8,7 @@
   justify-content: space-between;
   z-index: 1;
   animation-timing-function: ease-in;
-  transition: all .5s;
-
+  transition: all 0.5s;
 }
 
 .nav__black {
@@ -29,4 +28,28 @@
   right: 20px;
   width: 30px;
   object-fit: contain;
+}
+.dropdown-menu {
+  display: flex;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #e92c2c;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  object-fit: contain;
+  right: 20px;
+  width: 30px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }

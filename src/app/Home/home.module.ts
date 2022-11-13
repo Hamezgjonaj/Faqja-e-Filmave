@@ -9,8 +9,9 @@ import { AccordionComponentComponent } from './accordion-component/accordion-com
 
 
 
+
 @NgModule({
-  declarations: [HomeComponent, RowComponent, LoginComponent, RegisterComponent, AccordionComponentComponent],
+  declarations: [HomeComponent, RowComponent, LoginComponent, RegisterComponent, AccordionComponentComponent, ],
   imports: [
     CommonModule,
     HomeRoutingModule
