@@ -7,9 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class RowComponent implements OnInit {
 
-  @Input() image: any
-  @Input() video: any
-  @Input() reverse: any
+  @Input() image!: any
+  @Input() video!: any
+  @Input() reverse!: any
 
 
 

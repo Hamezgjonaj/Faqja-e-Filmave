@@ -27,14 +27,8 @@
               "src/favicon.ico",
               "src/assets"
             ],
-
-      "styles": [
-
-
-      ],
-      "scripts": [
-
-      ]
+            "styles": [],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -103,6 +97,16 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Faqja-e-Filmave:build:production",
+            "firebaseProject": "faqja-e-filmave-4d204",
+            "firebaseHostingSite": "faqja-e-filmave-4d204"
           }
         }
       }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "faqja-e-filmave-4d204": {
+      "hosting": {
+        "Faqja-e-Filmave": [
+          "faqja-e-filmave-4d204"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "faqja-e-filmave-4d204"
+  }
+}
