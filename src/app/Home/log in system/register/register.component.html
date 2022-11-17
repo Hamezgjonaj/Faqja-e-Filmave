@@ -15,7 +15,7 @@
         placeholder="email"
         required
         name="email"
-        ngModel="email"
+        [(ngModel)]="email"
       >
       <input
         type="password"
@@ -23,13 +23,9 @@
         placeholder="password"
         required
         name="password"
-        ngModel="password"
+        [(ngModel)]="password"
       >
-      <input
-        type="password"
-        class="login__input"
-        placeholder="password confirmation"
-      >
+
       <input
         type="button"
         routerLink="/feed"

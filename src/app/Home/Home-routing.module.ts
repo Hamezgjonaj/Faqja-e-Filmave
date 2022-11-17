@@ -4,8 +4,8 @@ import { HomeComponent } from './Home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './log in system/log-in/log-in.component';
 import { RegisterComponent } from './log in system/register/register.component';
-import { AdminComponent } from './log in system/admin/admin.component';
 import { ProfilComponent } from './profil/profil.component';
+import { AdminPanelComponent } from './log in system/admin-panel/admin-panel.component'
 
 const routes: Routes = [
   {
@@ -13,7 +13,7 @@ const routes: Routes = [
     component: HomeComponent,
   }, {
     path: 'admin',
-    component: AdminComponent,
+    component: AdminPanelComponent,
   },
   {
     path: 'Login',

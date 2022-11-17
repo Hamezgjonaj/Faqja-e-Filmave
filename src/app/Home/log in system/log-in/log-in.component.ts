@@ -8,29 +8,30 @@ import { AuthService } from '../../Auth/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  email: string = '';
-  password: string = '';
+  email : string = '';
+  password : string = '';
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth : AuthService) { }
 
   ngOnInit(): void {
   }
 
   login() {
 
-    if (this.email == '') {
-      alert('Please enter email address');
+    if(this.email == '') {
+      alert('Please enter email');
       return;
     }
 
-    if (this.password == '') {
+    if(this.password == '') {
       alert('Please enter password');
       return;
     }
-    this.auth.login(this.email, this.password);
+
+    this.auth.login(this.email,this.password);
+
     this.email = '';
     this.password = '';
-
 
   }
 

@@ -6,8 +6,7 @@ import { MovieTypeComponent } from './movie-type/movie-type.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-
-
+import { ChartModule } from 'primeng/chart';
 
 
 @NgModule({
@@ -21,7 +20,8 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
   imports: [
     CommonModule,
     MoviesRoutingModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    ChartModule,
   ],
   exports: []
 

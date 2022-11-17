@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { IsAdminService } from '../../Services/is-admin.service'
+import { AuthService } from '../../Home/Auth/auth.service'
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +11,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   navShow: boolean = false
-  constructor(private router: Router  ) { }
+  constructor(private router: Router, public admin: IsAdminService, public auth: AuthService) { }
 
   ngOnInit(): void {
     window.onscroll = () => {
@@ -22,7 +24,7 @@ export class NavbarComponent implements OnInit {
       }
     }
   }
-goToUser(){
-this.router.navigate(['/profile']);
-}
+  goToUser() {
+    this.router.navigate(['/profile']);
+  }
 }
