@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, NgModule } from '@angular/core';
+import { NgForm, NgModel } from '@angular/forms';
 import { AuthService } from '../../Auth/auth.service';
 
 
@@ -7,12 +8,16 @@ import { AuthService } from '../../Auth/auth.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
 })
+
 export class RegisterComponent implements OnInit {
+
   email: string = '';
   password: string = '';
-  constructor(private auth: AuthService) {}
+  @Input('ngModel')
+  model: NgModel;
+  constructor(private auth: AuthService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   register() {
     if (this.email == '') {
@@ -28,4 +33,8 @@ export class RegisterComponent implements OnInit {
     this.email = '';
     this.password = '';
   }
+
+
+
+
 }

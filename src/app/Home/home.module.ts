@@ -6,12 +6,13 @@ import { RegisterComponent } from './log in system/register/register.component';
 import { HomeRoutingModule } from './Home-routing.module';
 import { RowComponent } from './row/row.component';
 import { AccordionComponentComponent } from './accordion-component/accordion-component.component';
+import { ProfilComponent } from './profil/profil.component';
 
 
 
 
 @NgModule({
-  declarations: [HomeComponent, RowComponent, LoginComponent, RegisterComponent, AccordionComponentComponent, ],
+  declarations: [HomeComponent, RowComponent, LoginComponent, RegisterComponent, AccordionComponentComponent, ProfilComponent, ],
   imports: [
     CommonModule,
     HomeRoutingModule

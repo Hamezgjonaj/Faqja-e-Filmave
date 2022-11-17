@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private fireauth: AngularFireAuth, private Router: Router) {}
+  googleSignIn: any;
+  constructor(private fireauth: AngularFireAuth, private Router: Router) { }
 
   // Login method
   login(email: string, password: string) {
@@ -36,14 +37,14 @@ export class AuthService {
       }
     )
   }
-// sign out
- logout() {
-this.fireauth.signOut().then(() => {
-localStorage.removeItem('token');
-this.Router.navigate(['login']);
-}, err => {
- alert(err.message);
-}
-)
-}
+  // sign out
+  logout() {
+    this.fireauth.signOut().then(() => {
+      localStorage.removeItem('token');
+      this.Router.navigate(['login']);
+    }, err => {
+      alert(err.message);
+    }
+    )
+  }
 }
