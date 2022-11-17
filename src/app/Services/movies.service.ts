@@ -8,15 +8,19 @@ import { IMovie } from '../models/imovie';
 })
 export class MoviesService {
 
-baseUrl = 'https://api.themoviedb.org/3';
-//if server down uncomment line 13 and comment line 11
-//baseUrl = 'http://127.0.0.1:5000';
+  baseUrl = 'https://api.themoviedb.org/3';
+  //if server down uncomment line 13 and comment line 11
+  //baseUrl = 'http://127.0.0.1:5000';
 
-   constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getMovies(url:any): Observable<IMovie> {
+  getMovies(url: any): Observable<IMovie> {
+    console.log(this.baseUrl)
+    console.log(url)
     return this.http.get<IMovie>(this.baseUrl + url)
-//if server down uncomment line 20 and comment line 18
-//return this.http.get<IMovie>(this.baseUrl)
+
+
+    //if server down uncomment line 20 and comment line 18
+    //return this.http.get<IMovie>(this.baseUrl)
   }
 }

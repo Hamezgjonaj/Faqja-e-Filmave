@@ -7,18 +7,25 @@
   />
   <div class="login__form">
     <h1 style="color: aliceblue">Login</h1>
-    <input type="email" class="login__input" placeholder="email" name="email" [(ngModel)]="email" >
-    <input type="password" class="login__input" placeholder="password" name="password" [(ngModel)]="password">
     <input
-      type="button"
-      routerLink="/feed"
+      type="email"
       class="login__input"
-      value="Login"
-      (click)="login()"
+      placeholder="email"
+      name="email"
+      [(ngModel)]="email"
     />
-<div class="col-md-6-7">
-
-<a href="">Need Account ? <span class="text-danger">You can pay!!!</span></a>
-</div>
+    <input
+      type="password"
+      class="login__input"
+      placeholder="password"
+      name="password"
+      [(ngModel)]="password"
+    />
+    <input type="button" class="login__input" value="Login" (click)="login()" />
+    <div class="col-md-6-7">
+      <a href=""
+        >Need Account ? <span class="text-danger">You can pay!!!</span></a
+      >
+    </div>
   </div>
 </div>

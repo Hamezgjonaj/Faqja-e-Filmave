@@ -12,6 +12,7 @@ import { ChartModule } from 'primeng/chart';
 import { ChartComponent } from './chart/chart.component';
 import { AdminPanelComponent } from './log in system/admin-panel/admin-panel.component';
 
+
 @NgModule({
   declarations: [HomeComponent, RowComponent, LoginComponent, RegisterComponent, AccordionComponentComponent, ProfilComponent, ChartComponent, AdminPanelComponent,],
   imports: [
@@ -19,6 +20,7 @@ import { AdminPanelComponent } from './log in system/admin-panel/admin-panel.com
     HomeRoutingModule,
     FormsModule,
     ChartModule,
+
   ]
 })
 

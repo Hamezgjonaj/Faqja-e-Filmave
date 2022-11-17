@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseChartService } from './firebase-chart.service'
 
 @Component({
   selector: 'app-chart',
@@ -8,12 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class ChartComponent implements OnInit {
 
   basicData = {
-    labels: ['was','current','to be'],
+    labels: ['was', 'current', 'to be'],
     datasets: [
       {
         label: 'My First dataset',
         backgroundColor: '#42A5F5',
-        data: [3,4,5]
+        data: []
       },
     ]
   };
@@ -41,9 +42,21 @@ export class ChartComponent implements OnInit {
     }]
   };
 
-  constructor() { }
+  constructor(private firebase: FirebaseChartService) { }
 
   ngOnInit(): void {
+    this.firebase.getallUsers().subscribe(response => {
+      let array = []
+      array.push(response.length - 1)
+      array.push(response.length)
+      array.push(response.length + 1)
+      console.log(array)
+      this.basicData.datasets[0].data = array;
+      this.basicData = { ...this.basicData }
+    })
   }
 
+  returnData() {
+    return this.basicData
+  }
 }

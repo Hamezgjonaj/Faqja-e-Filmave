@@ -3,13 +3,14 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { getAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { IsAdminService } from '../../Services/is-admin.service'
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   googleSignIn: any;
-  constructor(private fireauth: AngularFireAuth, private Router: Router, private admin: IsAdminService) { }
+  constructor(private fireauth: AngularFireAuth, private Router: Router, private admin: IsAdminService, private firebase: AngularFirestore) { }
 
   // Login method
   login(email: string, password: string) {
@@ -32,8 +33,8 @@ export class AuthService {
   register(email: string, password: string) {
     this.fireauth.createUserWithEmailAndPassword(email, password).then(
       () => {
-        alert('Rrgistration successful');
-        this.Router.navigate(['/profil']);
+        this.firebase.collection('auth').add({ email: email, password: password });
+        this.Router.navigate(['/feed']);
       },
       (err) => {
         alert(err.message);

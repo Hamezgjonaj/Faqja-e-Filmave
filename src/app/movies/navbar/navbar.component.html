@@ -14,12 +14,20 @@
             alt="Avatar"
         /></span>
         <div class="dropdown-content">
-          <p>Hello World!</p>
-          <button class="" routerLink="/profil">profil</button>
-          <button *ngIf="admin.isAdmin" class="" routerLink="/admin">
+          <button mat-raised-button class="button" routerLink="/profil">
+            Profil
+          </button>
+          <button
+            mat-raised-button
+            *ngIf="admin.isAdmin"
+            class="button"
+            routerLink="/admin"
+          >
             Admin Panel
           </button>
-          <button class="" (click)="auth.logout()">LogOut</button>
+          <button mat-raised-button class="button" (click)="auth.logout()">
+            LogOut
+          </button>
         </div>
       </div>
     </div>

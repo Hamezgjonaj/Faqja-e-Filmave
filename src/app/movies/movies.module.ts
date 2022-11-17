@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { ChartModule } from 'primeng/chart';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ChartModule } from 'primeng/chart';
     MoviesRoutingModule,
     YouTubePlayerModule,
     ChartModule,
+    MatButtonModule
   ],
   exports: []
 
