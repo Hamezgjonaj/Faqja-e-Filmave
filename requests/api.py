@@ -5,58 +5,6 @@ import requests
 import json
 import glob
 
-# f = open('movies.json', 'r')
-# data = json.load(f)
-# f.close()
-
-# app = Flask(__name__)
-# CORS(app, resources={r"*": {"origins": "*"}})
-
-# @app.route('/')
-# def index():
-#   return data
-# app.run()
-
-base_url = 'https://api.themoviedb.org/3'
-url_ls = []
-
-
-filename = "C:/Users/user/Desktop/link.txt"
-
-with open(filename) as file:
-    for url in file:
-        url_ls.append(url)
-
-
-url_ls = [item.rstrip() for item in url_ls]
-# print(url_ls)
-
-
-# i=1
-# for url in url_ls:
-#   r = requests.get(base_url+url)
-#   data = r.json()
-#   print(data)
-
-#   with open(f'requests/data{i}.json', 'w') as f:
-#       json.dump(data, f)
-#       i+=1
-
-
-
-files_ls = glob.glob('requests\*')
-files_ls = [item.replace("\\", '/') for item in files_ls]
-
-# print(files_ls)
-
-response_ls = []
-i = 1
-for file in files_ls:
-  f = open(f'requests\data{i}.json', 'r')
-  data = json.load(f)
-  response_ls.append(data)
-  f.close()
-  i+=1
 
 app = Flask(__name__)
 CORS(app, resources={r"*": {"origins": "*"}})
@@ -64,7 +12,10 @@ CORS(app, resources={r"*": {"origins": "*"}})
 
 @app.route('/trending/all/week?api_key=28080d33c64f2524c45196d7e9b80b83&language=en-US')
 def index():
-  return response_ls[1]
+  f = open('data1.json', 'r')
+  data = json.load(f)
+  f.close()
+  return data
 
 @app.route('/discover/tv?api_key=28080d33c64f2524c45196d7e9b80b83&with_networks=213')
 def index1():
