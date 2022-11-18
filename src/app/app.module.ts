@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ChartModule } from 'primeng/chart';
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
