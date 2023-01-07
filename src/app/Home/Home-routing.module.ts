@@ -8,10 +8,7 @@ import { ProfilComponent } from './profil/profil.component';
 import { AdminPanelComponent } from './log in system/admin-panel/admin-panel.component'
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-  }, {
+    {
     path: 'admin',
     component: AdminPanelComponent,
   },
