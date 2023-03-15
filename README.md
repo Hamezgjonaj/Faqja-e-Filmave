@@ -1,3 +1,12 @@
+# Production Environment
+
+https://faqja-e-filmave-4d204.web.app/
+
+## If you want to try it, this is the email and password of the admin profile
+
+Email : maksi@filma.com
+Pasword : maksi1234
+
 # FaqjaEFilmave
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
